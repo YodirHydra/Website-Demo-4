@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Champions League Bracket</title>
+  <link rel="stylesheet" href="knoc.css" />
+</head>
+<body>
+  <div class="bracket-wrapper">
+    <svg id="lines"></svg>
+
+    <!-- Round of 16 -->
+    <div class="round">
+      <div class="match" id="r16-1"><span>PSV</span><span>Arsenal</span></div>
+      <div class="match" id="r16-2"><span>Real Madrid</span><span>Atlético</span></div>
+      <div class="match" id="r16-3"><span>Paris</span><span>Liverpool</span></div>
+      <div class="match" id="r16-4"><span>Club Brugge</span><span>Aston Villa</span></div>
+      <div class="match" id="r16-5"><span>Benfica</span><span>Barcelona</span></div>
+      <div class="match" id="r16-6"><span>B. Dortmund</span><span>Lille</span></div>
+      <div class="match" id="r16-7"><span>Bayern München</span><span>Leverkusen</span></div>
+      <div class="match" id="r16-8"><span>Feyenoord</span><span>Inter</span></div>
+    </div>
+
+    <!-- Quarterfinals -->
+    <div class="round">
+      <div class="match" id="qf-1"><span>Arsenal</span><span>Real Madrid</span></div>
+      <div class="match" id="qf-2"><span>Paris</span><span>Aston Villa</span></div>
+      <div class="match" id="qf-3"><span>Barcelona</span><span>B. Dortmund</span></div>
+      <div class="match" id="qf-4"><span>Bayern</span><span>Inter</span></div>
+    </div>
+
+    <!-- Semifinals -->
+    <div class="round">
+      <div class="match" id="sf-1"><span>Arsenal</span><span>Paris</span></div>
+      <div class="match" id="sf-2"><span>Barcelona</span><span>Inter</span></div>
+    </div>
+
+    <!-- Final -->
+    <div class="round">
+      <div class="match final" id="final">
+        <span>Winner SF1</span>
+        <span>Winner SF2</span>
+        <div class="cup">🏆 Final — 31 May 2025</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="knoc.js"></script>
+</body>
+</html>

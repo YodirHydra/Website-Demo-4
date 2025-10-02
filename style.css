@@ -1,0 +1,383 @@
+/* Custom properties for easy color changes based on the new image */
+:root {
+    --primary-green: #03e3f4;
+    --primary-blue: #2196F3; /* View Performance button, League icon colors */
+    --status-upcoming: #FFC107; /* Status: Upcoming */
+    --status-completed: #9E9E9E; /* Status: Completed */
+
+    --text-color: #e0e0e0;
+    --background-start: #022eef; 
+    --background-end:#010564 ;
+    --card-bg-light: rgba(255, 255, 255, 0.1); /* Main Box Glass */
+    --nested-bg-light: rgba(255, 255, 255, 0.05); /* Nested Box Glass */
+}
+#bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2; /* Place it behind the content */
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Ensures the video covers the entire screen */
+}
+/* Global Reset and Background */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--background-start) 0%, var(--background-end) 100%);
+    color: var(--text-color);
+    min-height: 100vh;
+    padding-bottom: 30px;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--primary-green);
+}
+
+/* --- Glass Effect Classes --- */
+
+/* Main Card Glass Effect */
+.glass-effect {
+    background: var(--card-bg-light);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+/* Nested Item Glass Effect */
+.glass-item {
+    background: var(--nested-bg-light);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    transition: transform 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.glass-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+.logo i {
+    color: var(--primary-green);
+    margin-right: 5px;
+}
+
+.main-nav a {
+    margin-left: 25px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.main-nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.main-nav i {
+    margin-right: 5px;
+}
+
+.sign-in-btn {
+    background-color: var(--primary-green);
+    padding: 8px 15px !important;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.sign-in-btn:hover {
+    background-color: #66BB6A;
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 60px 5%;
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.hero-section p {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #cccccc;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 5%;
+}
+
+/* Card Headers: Apply color to icons based on the image (My Tournaments is green/My League is blue) */
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.tournaments-card h2 i {
+    color: var(--primary-green); /* Trophy icon color */
+    margin-right: 10px;
+}
+
+.league-card h2 i {
+    color: var(--primary-blue); /* Users icon color */
+    margin-right: 10px;
+}
+
+/* Tournaments Card Styling */
+.tournament-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tournament-item h3 {
+    font-size: 1.1em;
+    margin-bottom: 3px;
+}
+
+.tournament-item p {
+    font-size: 0.9em;
+    color: #cccccc;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px; /* Boxier look as in the image */
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white; /* Changed status text color to white for better contrast on colored backgrounds */
+    min-width: 80px;
+    text-align: center;
+}
+
+.active-status { background-color: var(--primary-green); }
+.upcoming-status { background-color: var(--status-upcoming); }
+.completed-status { background-color: var(--status-completed); }
+
+.create-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-green); /* Green button */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.create-btn:hover {
+    background-color: #66BB6A;
+}
+
+/* League Card Styling */
+.league-card .glass-item {
+    padding: 10px 15px;
+}
+
+.league-stat .stat-name {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    flex-grow: 1;
+}
+
+.league-stat i {
+    margin-right: 10px;
+    color: var(--primary-blue); /* All league icons are blue */
+}
+
+.stat-value {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: white;
+    min-width: 60px;
+    text-align: right;
+}
+
+.view-performance-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-blue); /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+}
+
+.view-performance-btn:hover {
+    background-color: #4C97DC;
+}
+
+/* Quick Links Section */
+.quick-links {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding: 0 5%;
+}
+
+.quick-link-item {
+    text-align: center;
+    width: 20%;
+    padding: 15px 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.quick-link-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.quick-link-item i {
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: white;
+}
+
+
+/* --- Responsiveness --- */
+@media (max-width: 900px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .quick-links {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .quick-link-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav a {
+        margin: 10px 0;
+        padding: 10px;
+        width: 90%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+
+    .quick-link-item {
+        width: 100%;
+    }
+
+    .glass-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tournament-item .status {
+        align-self: flex-end;
+        margin-top: 5px;
+    }
+    
+    .league-stat .stat-name {
+        margin-bottom: 5px;
+    }
+
+    .league-stat .stat-value {
+        align-self: flex-end;
+    }
+}

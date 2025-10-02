@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Tournament Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-futbol"></i>Orchestrator
+        </div>
+        <nav class="main-nav">
+            <a href="#"><i class="fas fa-home"></i> Home</a>
+            <a href="#"><i class="fas fa-user-plus"></i> Register</a>
+            <a href="#"><i class="fas fa-chart-line"></i> Performance</a>
+            <a href="#"><i class="fas fa-address-book"></i> Contacts</a>
+            <a href="#" class="sign-in-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+         <video autoplay muted loop id="bg-video">
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+       </video>
+        <section class="hero-section">
+            <h1>The Orchestrator</h1>
+            <p>Manage your tournaments, track performance, and compete with the best players worldwide</p>
+        </section>
+
+        <section class="dashboard-grid">
+            <div class="card glass-effect tournaments-card">
+                <h2><i class="fas fa-trophy"></i> My Tournaments</h2>
+                
+                <div class="tournament-item glass-item active">
+                    <div>
+                       <a href="https://yodirhydra.github.io/Website-Demo-3/practice.html/Practice/practice.html" target="_self"><h3>Summer Camp 2024</h3></a>
+                        <p>24 participants</p>
+                    </div>
+                    <span class="status active-status">ACTIVE</span>
+                </div>
+
+                <div class="tournament-item glass-item upcoming">
+                    <div>
+                        <h3>Champions League</h3>
+                        <p>24 participants</p>
+                    </div>
+                    <span class="status upcoming-status">UPCOMING</span>
+                </div>
+
+                <div class="tournament-item glass-item completed">
+                    <div>
+                        <h3>Winter Tournament</h3>
+                        <p>12 participants</p>
+                    </div>
+                    <span class="status completed-status">COMPLETED</span>
+                </div>
+
+                <button class="create-btn">Create New Tournament</button>
+            </div>
+
+            <div class="card glass-effect league-card">
+                <h2><i class="fas fa-users"></i> My League</h2>
+                
+                <div class="league-stat glass-item">
+                    <div class="stat-name">
+                        <i class="fas fa-star"></i> Current Rank
+                    </div>
+                    <span class="stat-value">#3</span>
+                </div>
+                
+                <div class="league-stat glass-item">
+                    <div class="stat-name">
+                        <i class="fas fa-star"></i> Total Points
+                    </div>
+                    <span class="stat-value">247</span>
+                </div>
+                
+                <div class="league-stat glass-item">
+                    <div class="stat-name">
+                        <i class="fas fa-arrow-trend-up"></i> Win Rate
+                    </div>
+                    <span class="stat-value">78%</span>
+                </div>
+
+                <button class="view-performance-btn">View Performance</button>
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <div class="quick-link-item glass-effect">
+                <i class="fas fa-user-plus"></i>
+                <p>Register</p>
+            </div>
+            <div class="quick-link-item glass-effect">
+                <i class="fas fa-medal"></i>
+                <p>Top Players</p>
+            </div>
+            <div class="quick-link-item glass-effect">
+                <i class="fas fa-address-book"></i>
+                <p>Contacts</p>
+            </div>
+            <div class="quick-link-item glass-effect">
+                <i class="fas fa-key"></i>
+                <p>Join Now</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

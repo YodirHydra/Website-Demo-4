@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Tournament Manager</title>
+    <link rel="stylesheet" href="tour.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-futbol"></i>Orchestrator
+        </div>
+        <nav class="main-nav">
+            <a href="#"><i class="fas fa-home"></i> Home</a>
+            <a href="#"><i class="fas fa-user-plus"></i> Register</a>
+            <a href="#"><i class="fas fa-chart-line"></i> Performance</a>
+            <a href="#"><i class="fas fa-address-book"></i> Contacts</a>
+            <a href="#" class="sign-in-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="bracket-wrapper">
+    <svg id="lines"></svg>
+
+    <!-- Round of 16 -->
+    <div class="round">
+      <div class="match" id="r16-1"><span>PSV</span><span>Arsenal</span></div>
+      <div class="match" id="r16-2"><span>Real Madrid</span><span>Atlético</span></div>
+      <div class="match" id="r16-3"><span>Paris</span><span>Liverpool</span></div>
+      <div class="match" id="r16-4"><span>Club Brugge</span><span>Aston Villa</span></div>
+      <div class="match" id="r16-5"><span>Benfica</span><span>Barcelona</span></div>
+      <div class="match" id="r16-6"><span>B. Dortmund</span><span>Lille</span></div>
+      <div class="match" id="r16-7"><span>Bayern München</span><span>Leverkusen</span></div>
+      <div class="match" id="r16-8"><span>Feyenoord</span><span>Inter</span></div>
+    </div>
+
+    <!-- Quarterfinals -->
+    <div class="round">
+      <div class="match" id="qf-1"><span>Arsenal</span><span>Real Madrid</span></div>
+      <div class="match" id="qf-2"><span>Paris</span><span>Aston Villa</span></div>
+      <div class="match" id="qf-3"><span>Barcelona</span><span>B. Dortmund</span></div>
+      <div class="match" id="qf-4"><span>Bayern</span><span>Inter</span></div>
+    </div>
+
+    <!-- Semifinals -->
+    <div class="round">
+      <div class="match" id="sf-1"><span>Arsenal</span><span>Paris</span></div>
+      <div class="match" id="sf-2"><span>Barcelona</span><span>Inter</span></div>
+    </div>
+
+    <!-- Final -->
+    <div class="round">
+      <div class="match final" id="final">
+        <span>Winner SF1</span>
+        <span>Winner SF2</span>
+        <div class="cup">🏆 Final — 31 May 2025</div>
+      </div>
+    </div>
+  </div>
+
+    <script src="tour.js"></script>
+</body>
+</html>
